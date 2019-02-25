@@ -1,0 +1,17 @@
+<h1>Post Page</h1>
+
+ <%= link_to "New Post", posts_new_path %>
+
+ <% @posts.each do |post| %>
+  <p>
+    <%= post.title %>
+  </p>
+  <p>
+    <%= post.body %>
+  </p>
+
+  <%= link_to "Show", post %>
+  <%= render 'posts/share', post: post %>
+
+
+ <% end %>
